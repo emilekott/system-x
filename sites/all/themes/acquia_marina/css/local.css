@@ -1,0 +1,16 @@
+.view-latest-news .views-field-field-image{
+    float: left;
+    margin: 1em 1em 1em 0;
+    clear: both;
+    background: #D6DDB9;
+    padding: 3px;
+}
+
+.view-latest-news .views-row{
+    padding: 10px 0;
+    border-bottom: 1px solid #D6DDB9;
+}
+
+.view-latest-news .views-field-title{
+    font-size: 16px;
+}
