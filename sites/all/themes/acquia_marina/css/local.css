@@ -6,11 +6,41 @@
     padding: 3px;
 }
 
+.view-latest-news .views-field-field-image:hover{
+    background: #fff;
+}
+
 .view-latest-news .views-row{
     padding: 10px 0;
     border-bottom: 1px solid #D6DDB9;
 }
 
-.view-latest-news .views-field-title{
+.view-latest-news.view-display-id-page .views-field-title{
     font-size: 16px;
 }
+
+#preface-top ul.menu{
+    float:right;
+   
+}
+
+#preface-top ul.menu li{
+    float: right;
+    
+}
+
+#preface-top ul.menu li a{
+    text-decoration: none;
+    color: #0062A0;
+    padding: 5px 10px;
+    background: #fff;
+    border-right: 2px solid #0062A0;
+}
+
+#preface-top ul.menu li a:hover{
+    background: #0062A0;
+    color: #fff;
+}
+
+
+.cart-block-item-price, .cart-block-summary-total, .subtotal, .uc-price, .cart-block-summary-items, .uc_account_info, .views-field-order-total { display: none; }
