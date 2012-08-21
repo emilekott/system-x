@@ -1,3 +1,27 @@
+html{
+    background-color: #EDECEC; 
+}
+
+.preface-top-outer{
+    border-top: 3px solid #FAB600;
+}
+
+.block-superfish ul.sf-horizontal li a:hover, .block-superfish ul.sf-horizontal li a:focus, .block-superfish ul.sf-horizontal li.sfHover > a:link, .block-superfish ul.sf-horizontal li.sfHover > a:visited, .block-superfish ul.sf-horizontal li.active-trail > a:link, .block-superfish ul.sf-horizontal li.active-trail > a:visited, .main-menu ul.menu li a:hover, .main-menu ul.menu li a:focus, .main-menu ul.menu li.active-trail a:link, .main-menu ul.menu li.active-trail a:visited, .main-menu ul.menu li a.active {
+    background-color: #FAB600;
+    background-image: -webkit-gradient( linear, left top, left bottom, from(#FAB600), to(#FAB600), color-stop(40%, #FAB600) );
+    background-image: -moz-linear-gradient( top, #FAB600 0%, #FAB600 40%, #FAB600 100% );
+    color: #000;
+}
+
+
+.main-wrapper {
+    background-color: #EDECEC;
+    background-image: linear-gradient( top, #EDECEC 0%, #FFFFFF 55px );
+    background-image: -o-linear-gradient( top, #EDECEC 0%, #FFFFFF 55px );
+    background-image: -webkit-gradient( linear, left top, left bottom, from(#EDECEC), to(#FFFFFF), color-stop(0%, #EDECEC), color-stop(10%, #FFFFFF) );
+    background-image: -moz-linear-gradient( top, #EDECEC 0%, #FFFFFF 55px );
+}
+
 .view-latest-news .views-field-field-image{
     float: left;
     margin: 1em 1em 1em 0;
@@ -21,12 +45,12 @@
 
 #preface-top ul.menu{
     float:right;
-   
+
 }
 
 #preface-top ul.menu li{
     float: right;
-    
+
 }
 
 #preface-top ul.menu li a{
