@@ -12,7 +12,7 @@ function general_init ()
 
 /*remove add to cart if no stock */
 function general_form_alter(&$form, &$form_state, $form_id) {
-
+/*
 	if (substr($form_id, 0, 28) == 'uc_product_add_to_cart_form_') {
 		// get the node id from the $form array
 		$nid = $form['nid']['#value'];
@@ -24,4 +24,6 @@ function general_form_alter(&$form, &$form_state, $form_id) {
 			$form['actions']['submit']['#disabled'] = TRUE;
                 }
 	}
+ 
+ */
 }
