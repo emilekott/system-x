@@ -78,6 +78,10 @@ div#edit-prod-code-wrapper{
 }
 
 
+#uc-cart-view-form td.image{
+    display: none;
+}
 
 
-.cart-block-item-price, .cart-block-summary-total, .subtotal, .uc-price, .cart-block-summary-items, .uc_account_info, .views-field-order-total { display: none; }
+
+.cart-block-item-price, .cart-block-summary-total, .subtotal, #subtotal-title, .uc-price, .cart-block-summary-items, .uc_account_info, .views-field-order-total, th.price { display: none; }
