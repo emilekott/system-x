@@ -22,6 +22,9 @@ html{
     background-image: -moz-linear-gradient( top, #EDECEC 0%, #FFFFFF 55px );
 }
 
+
+
+
 .view-latest-news .views-field-field-image{
     float: left;
     margin: 1em 1em 1em 0;
@@ -42,6 +45,8 @@ html{
 .view-latest-news.view-display-id-page .views-field-title{
     font-size: 16px;
 }
+
+
 
 #preface-top ul.menu{
     float:right;
@@ -65,6 +70,14 @@ html{
     background: #0062A0;
     color: #fff;
 }
+
+
+
+div#edit-prod-code-wrapper{
+    display: none;
+}
+
+
 
 
 .cart-block-item-price, .cart-block-summary-total, .subtotal, .uc-price, .cart-block-summary-items, .uc_account_info, .views-field-order-total { display: none; }

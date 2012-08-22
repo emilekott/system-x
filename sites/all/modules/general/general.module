@@ -26,4 +26,14 @@ function general_form_alter(&$form, &$form_state, $form_id) {
 	}
  
  */
+    
+    if ($form_id == 'views_exposed_form'){
+        //hide prod_code filter field using css
+
+        //copy exposed value into prod_code filter    
+        $form_state['input']['prod_code'] = $form_state['input']['title'];
+        
+    }
 }
+
+
