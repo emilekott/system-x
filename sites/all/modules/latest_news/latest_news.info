@@ -1,0 +1,10 @@
+name = latest_news
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = image
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[image][] = mini
+features[views_view][] = latest_news
