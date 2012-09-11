@@ -25,12 +25,17 @@ html{
 
 
 
-.view-latest-news .views-field-field-image{
+.view-latest-news.view-id-latest_news.view-display-id-page .views-field-field-image{
     float: left;
     margin: 1em 1em 1em 0;
     clear: both;
     background: #D6DDB9;
     padding: 3px;
+}
+
+.view-id-latest_news.view-display-id-block_1 .views-field-field-image{
+    float: left;
+    margin: 0 5px 5px 0;
 }
 
 .view-latest-news .views-field-field-image:hover{
