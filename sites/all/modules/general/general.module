@@ -6,6 +6,7 @@ function general_init() {
     if (strpos($path, "product/") !== false) {
         drupal_goto('stock/');
     }
+
 }
 
 /* remove add to cart if no stock */

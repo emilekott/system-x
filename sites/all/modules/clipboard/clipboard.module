@@ -1,71 +1,11 @@
 <?php
 
-function general_init() {
-    $path = drupal_get_path_alias(request_uri());
+function clipboard_init() {
 
-    if (strpos($path, "product/") !== false) {
-        drupal_goto('stock/');
-    }
-}
-
-/* remove add to cart if no stock */
-
-function general_form_alter(&$form, &$form_state, $form_id) {
-    /*
-      if (substr($form_id, 0, 28) == 'uc_product_add_to_cart_form_') {
-      // get the node id from the $form array
-      $nid = $form['nid']['#value'];
-
-      // load the node
-      $node = node_load($nid);
-      if ($node->field_stock_today['und'][0]['value'] < 1){
-      $form['actions']['submit']['#value'] = 'Out of stock';
-      $form['actions']['submit']['#disabled'] = TRUE;
-      }
-      }
-
-     */
-
-    if ($form_id == 'views_exposed_form') {
-        //hide prod_code filter field using css
-        //copy exposed value into prod_code filter    
-        $form_state['input']['prod_code'] = $form_state['input']['title'];
-    }
-
-    if ($form_id == 'uc_cart_view_form') {
-
-        for ($i = 0; $i < count($form['items']) - 6; $i++) {
-            $prod_code = $form['items'][$i]['#entity']->field_product_code['und'][0]['value'];
-            $title = $form['items'][$i]['#entity']->title;
-
-            $form['items'][$i]['desc']['#markup'] = $prod_code . " - " . $title;
-            
-          
-        }
-        unset($form['items']['#columns']['total']);
-
-        $form['items']['#columns']['qty']['cell'] ="";
-        $form['items']['#columns']['desc']['cell'] = '<abbr title="Quantity">Qty</abbr>';
-        
-        //print_r($form);
-    }
+    $path = drupal_get_path('module', 'clipboard') .'/js';
+    drupal_add_js(array('clipboard' => array('swf_path' => $path)), 'setting');
+    drupal_add_js($path . '/jquery.zclip.js');
+    drupal_add_js($path . '/copy.js');
     
-    if($form_id == 'uc_cart_checkout_form'){
-       // print_r($form);
-        /*
-        for ($i = 0; $i < count($form['items']) - 6; $i++) {
-            $prod_code = $form['items'][$i]['#entity']->field_product_code['und'][0]['value'];
-            $title = $form['items'][$i]['#entity']->title;
-
-            $form['items'][$i]['desc']['#markup'] = $prod_code . " - " . $title;
-            
-          
-        }
-        unset($form['items']['#columns']['total']);
-
-        $form['items']['#columns']['qty']['cell'] ="";
-        $form['items']['#columns']['desc']['cell'] = '<abbr title="Quantity">Qty</abbr>';
-        */
-    }
 }
 

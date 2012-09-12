@@ -1,5 +1,4 @@
-name = General
-description = Bits and bobs
-dependencies[] = pathauto
+name = Clipboard
+description = Adds clipboard copy functionality
 core = 7.x
-files[] = general.module
+files[] = clipboard.module
