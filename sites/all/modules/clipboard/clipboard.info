@@ -1,0 +1,5 @@
+name = General
+description = Bits and bobs
+dependencies[] = pathauto
+core = 7.x
+files[] = general.module

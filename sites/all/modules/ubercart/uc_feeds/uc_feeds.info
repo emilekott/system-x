@@ -1,0 +1,7 @@
+
+name = Ubercart Feeds
+description = Integrates Ubercart properties with Feeds
+package = Feeds
+dependencies[] = uc_product
+dependencies[] = feeds
+core = 7.x
