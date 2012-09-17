@@ -59,7 +59,7 @@ function acquia_marina_uc_cart_block_content($variables) {
         $paragraph .= $item['qty'] ." (".$sku.") ". strip_tags($item['title']).'<br />';    
     }
     
-    $paragraph = '<div id="to-copy" style="display:none">ORDER DETAILS<br />'.$paragraph.'</div>';
+    $paragraph = '<div id="to-copy" style="display:none"><pre>ORDER DETAILS<br />'.$paragraph.'</pre></div>';
     $paragraph .= '<br /><br />';
     
     $output .= $paragraph;
