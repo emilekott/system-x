@@ -20,7 +20,7 @@
     function htmlDecodeWithLineBreaks(html) {
         var breakToken = '_______break_______',
         lineBreakedHtml = html.replace(/<br\s?\/?>/gi, breakToken).replace(/<p\.*?>(.*?)<\/p>/gi, breakToken + '$1' + breakToken);
-        return $('<div>').html(lineBreakedHtml).text().replace(new RegExp(breakToken, 'g'), '\n');
+        return $('<div>').html(lineBreakedHtml).text().replace(new RegExp(breakToken, 'g'), '\r\n');
     }
     
 })(jQuery);
