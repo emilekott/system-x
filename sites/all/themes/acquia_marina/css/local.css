@@ -129,3 +129,7 @@ a.wide{
 #block-block-2 p{
     margin: 0 !important;
 }
+
+#preface-top ul.menu{
+    font-size: 10px;
+}
