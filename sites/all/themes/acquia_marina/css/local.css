@@ -158,3 +158,12 @@ a.reset-button{
     -webkit-border-radius: 4px;
 }
 
+a.reset-button:hover{
+    background-color: #4186B5;
+    background-image: linear-gradient( top, #286E9B 0%, #4186B5 50%, #286E9B 100% );
+    background-image: -o-linear-gradient( top, #286E9B 0%, #4186B5 50%, #286E9B 100% );
+    background-image: -webkit-gradient( linear, left bottom, left top, from(#286E9B), to(#286E9B), color-stop(50%, 4186b5) );
+    background-image: -moz-linear-gradient( top, #286E9B 0%, #4186B5 50%, #286E9B 100% );
+    cursor: pointer;
+    text-decoration: none;
+}
