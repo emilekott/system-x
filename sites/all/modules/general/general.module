@@ -33,9 +33,12 @@ function general_form_alter(&$form, &$form_state, $form_id) {
         
         
         
-        $form['new_reset'] = array(
-                '#markup' => '<a class="reset-button button" href="'.base_path().'">Reset</a>',
-            );
+        $form['reset'] = array(
+            '#type' => 'submit',
+            '#value' => 'Reset',
+            '#weight' => '500',
+            '#submit' => array('reset_stock_list'),
+        );
         
     }
 
@@ -74,4 +77,8 @@ function general_form_alter(&$form, &$form_state, $form_id) {
         $form['items']['#columns']['desc']['cell'] = '<abbr title="Quantity">Qty</abbr>';
         */
     }
+}
+
+function reset_stock_list(&$form, &$form_state) {
+    drupal_goto('stock-view');
 }
