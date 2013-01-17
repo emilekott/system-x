@@ -68,7 +68,7 @@ button, input[type="reset"], input[type="submit"], input[type="button"]{
     overflow: visible;
     text-shadow: none;
     width: auto;
-    color: #fff !important;
+    color: #fff;
     text-decoration: none;
     background: #d54937;
     padding: 10px;
@@ -1719,3 +1719,174 @@ div#edit-prod-code-wrapper{
 .views-exposed-form .views-exposed-widget .form-submit {
 margin-top: 0;
 }
+
+.view-available-stock .views-exposed-form .views-submit-button{
+    float:right;
+    padding:0;
+}
+
+.view-available-stock .views-exposed-form .form-submit{
+    margin: 0 5px;
+}
+
+.view-available-stock .views-exposed-form fieldset{
+    margin: 0;
+}
+
+.views-widget-filter-title{
+    margin-top: 5px;
+}
+
+.view-available-stock table td, .view-available-stock table th{
+    padding: 4px;
+    font-size: 0.8em;
+}
+
+.view-available-stock table td .form-actions{
+    margin: 0;
+}
+
+.view-available-stock table td .form-actions input[type="submit"].form-submit{
+    background: none;
+    padding: 0;
+    text-transform: none;
+     color: #0084B1;
+    text-decoration: none;
+    font-weight: normal;
+    -webkit-transition: color 0.4s ease;
+    -moz-transition: color 0.4s ease;
+    -o-transition: color 0.4s ease;
+    transition: color 0.4s ease;
+    font-size: 1em;
+font-weight: normal !important;
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+.view-available-stock table td .form-actions input[type="submit"].form-submit:hover{
+
+    color: #CC4434;
+}
+
+
+/*cart block*/
+.cart-block-item-price, .cart-block-summary-total, .subtotal, #subtotal-title, .uc-price, .cart-block-summary-items, .uc_account_info, .views-field-order-total, th.price { display: none; }
+
+.block-uc-cart h2{
+    margin-bottom: 30px;
+}
+
+.block-uc-cart{
+   background-color: #f4f4f4;
+    padding: 0; 
+    margin-bottom: 30px;
+}
+
+.block-uc-cart .block-inner{
+    padding: 30px;
+}
+
+.block-uc-cart .block-inner td{
+    font-size: 0.8em;
+}
+
+
+.cart-block-items.collapsed {
+display: block;
+}
+
+.cart-block-arrow{
+    display: none;
+}
+
+.cart-block-summary{
+    margin-bottom: 30px;
+    border: none;
+}
+
+/*news block homepage */
+.block-latest-news-block-1{
+    background-color: #f4f4f4;
+    padding: 0;
+    height: 400px;
+}
+
+.block-latest-news-block-1 .block-inner{
+    padding: 30px;
+}
+
+.block-latest-news-block-1 h2.block-title{
+    float:left;
+    margin-bottom: 30px;
+    font-size: 1.3em;
+}
+
+.more-link{
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    float:right;
+    margin-top: 2px;
+    line-height: 1em;
+}
+
+.more-link a{
+    color: #0084B1;
+    background: url('../images/arrow-blue-small-r.png') no-repeat right;
+    padding-right: 20px;
+    font-weight: 100;
+    -webkit-transition: color 0.4s ease;
+    -moz-transition: color 0.4s ease;
+    -o-transition: color 0.4s ease;
+    transition: color 0.4s ease;
+}
+
+.more-link a:hover{
+    color: #CC4434;
+}
+
+.block-latest-news-block-1 .views-field-field-image{
+    float: left;
+    margin: 0 15px 30px 0;
+}
+
+.block-latest-news-block-1 .views-field-title{
+    float:left;
+    line-height:0.8em;
+    width: 150px;
+}
+
+.block-latest-news-block-1 .views-field-created{
+    float: left;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 400;
+    width: 150px;
+    margin-top: 5px;
+}
+
+
+/*latest news */
+.view-latest-news.view-id-latest_news.view-display-id-page .views-field-field-image{
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+
+.view-latest-news.view-id-latest_news.view-display-id-page .views-field-created{
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 400;
+}
+.view-latest-news.view-id-latest_news.view-display-id-page .views-field-title{
+    margin-bottom: 0.5em;
+    line-height: 1em;
+}
+
+.view-latest-news.view-id-latest_news.view-display-id-page .views-field-body{
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+}
+.view-latest-news.view-id-latest_news.view-display-id-page .views-row{
+    margin-bottom: 50px;
+}
+

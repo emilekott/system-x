@@ -145,5 +145,53 @@ function systemx_distribution_colorbox_image_formatter($variables) {
   return theme('colorbox_imagefield', array('image' => $image, 'path' => $path, 'title' => $caption, 'gid' => $gallery_id)).$inline_caption;
 }
 
+function systemx_distribution_uc_cart_block_content($variables) {
+    $help_text = $variables['help_text'];
+    $items = $variables['items'];
+    $item_count = $variables['item_count'];
+    $item_text = $variables['item_text'];
+    $total = $variables['total'];
+    $summary_links = $variables['summary_links'];
+    $collapsed = $variables['collapsed'];
 
+    $output = '';
+    
+    // Add the help text if enabled.
+    if ($help_text) {
+        $output .= '<span class="cart-help-text">' . $help_text . '</span>';
+    }
+
+    // Add a table of items in the cart or the empty message.
+    $output .= theme('uc_cart_block_items', array('items' => $items, 'collapsed' => $collapsed));
+
+    // Add the summary section beneath the items table.
+    
+    
+    $output .= theme('uc_cart_block_summary', array('item_count' => $item_count, 'item_text' => $item_text, 'total' => $total, 'summary_links' => $summary_links));
+    $output .= '<a href="#" class="copy-button">Copy Cart To Clipboard</a>';
+
+    //build hidden paragraph to copy to clipboard
+    $paragraph = "";
+    
+    foreach ($items as $item) {
+        // Add the basic row with quantity, title, and price.
+        //dsm($item);
+        $node = node_load($item['nid']);
+        $sku = $node->model;
+        
+        $paragraph .= $item['qty'] ." (".$sku.") ". strip_tags($item['title']).'<br />';    
+    }
+    
+    $paragraph = '<div id="to-copy" style="display:none"><pre>ORDER DETAILS<br />'.$paragraph.'</pre></div>';
+    $paragraph .= '<br /><br />';
+    
+    $output .= $paragraph;
+
+
+
+
+
+
+    return $output;
+}
 
