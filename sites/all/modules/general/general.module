@@ -4,7 +4,7 @@ function general_init() {
     $path = drupal_get_path_alias(request_uri());
 
     if (strpos($path, "product/") !== false) {
-        drupal_goto('stock/');
+       // drupal_goto('stock/');
     }
 }
 
@@ -34,7 +34,7 @@ function general_form_alter(&$form, &$form_state, $form_id) {
         
         
         $form['new_reset'] = array(
-                '#markup' => '<a class="reset-button" href="'.base_path().'">Reset</a>',
+                '#markup' => '<a class="reset-button button" href="'.base_path().'">Reset</a>',
             );
         
     }

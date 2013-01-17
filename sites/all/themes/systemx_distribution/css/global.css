@@ -1703,3 +1703,14 @@ font-weight: bold;
 .node-type-product .field-name-field-specifications table{
     max-width: 550px !important;
 }
+
+
+/*b2b*/
+div#edit-prod-code-wrapper{
+    display: none;
+}
+
+
+#uc-cart-view-form td.image{
+    display: none;
+}
