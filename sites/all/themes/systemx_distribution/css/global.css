@@ -1714,3 +1714,8 @@ div#edit-prod-code-wrapper{
 #uc-cart-view-form td.image{
     display: none;
 }
+
+
+.views-exposed-form .views-exposed-widget .form-submit {
+margin-top: 0;
+}

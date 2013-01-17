@@ -4,7 +4,7 @@ function general_init() {
     $path = drupal_get_path_alias(request_uri());
 
     if (strpos($path, "product/") !== false) {
-       // drupal_goto('stock/');
+        // drupal_goto('stock/');
     }
 }
 
@@ -30,15 +30,28 @@ function general_form_alter(&$form, &$form_state, $form_id) {
         //hide prod_code filter field using css
         //copy exposed value into prod_code filter    
         $form_state['input']['prod_code'] = $form_state['input']['title'];
+
+
+        
+
+        $form['buttons'] = array(
+            '#type' => 'fieldset',
+            '#title' => '',
+            '#collapsible' => FALSE,
+        );
         
         
         
-        $form['reset'] = array(
+        $form['buttons']['submit'] = $form['submit'];
+        unset($form['submit']);
+        
+        $form['buttons']['reset'] = array(
             '#type' => 'submit',
             '#value' => 'Reset',
-            '#weight' => '500',
             '#submit' => array('reset_stock_list'),
         );
+        
+        
         
     }
 
@@ -49,33 +62,31 @@ function general_form_alter(&$form, &$form_state, $form_id) {
             $title = $form['items'][$i]['#entity']->title;
 
             $form['items'][$i]['desc']['#markup'] = $prod_code . " - " . $title;
-            
-          
         }
         unset($form['items']['#columns']['total']);
 
-        $form['items']['#columns']['qty']['cell'] ="";
+        $form['items']['#columns']['qty']['cell'] = "";
         $form['items']['#columns']['desc']['cell'] = '<abbr title="Quantity">Qty</abbr>';
-        
+
         //print_r($form);
     }
-    
-    if($form_id == 'uc_cart_checkout_form'){
-       // print_r($form);
+
+    if ($form_id == 'uc_cart_checkout_form') {
+        // print_r($form);
         /*
-        for ($i = 0; $i < count($form['items']) - 6; $i++) {
-            $prod_code = $form['items'][$i]['#entity']->field_product_code['und'][0]['value'];
-            $title = $form['items'][$i]['#entity']->title;
+          for ($i = 0; $i < count($form['items']) - 6; $i++) {
+          $prod_code = $form['items'][$i]['#entity']->field_product_code['und'][0]['value'];
+          $title = $form['items'][$i]['#entity']->title;
 
-            $form['items'][$i]['desc']['#markup'] = $prod_code . " - " . $title;
-            
-          
-        }
-        unset($form['items']['#columns']['total']);
+          $form['items'][$i]['desc']['#markup'] = $prod_code . " - " . $title;
 
-        $form['items']['#columns']['qty']['cell'] ="";
-        $form['items']['#columns']['desc']['cell'] = '<abbr title="Quantity">Qty</abbr>';
-        */
+
+          }
+          unset($form['items']['#columns']['total']);
+
+          $form['items']['#columns']['qty']['cell'] ="";
+          $form['items']['#columns']['desc']['cell'] = '<abbr title="Quantity">Qty</abbr>';
+         */
     }
 }
 
