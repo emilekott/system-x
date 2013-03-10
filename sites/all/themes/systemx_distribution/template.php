@@ -168,7 +168,7 @@ function systemx_distribution_uc_cart_block_content($variables) {
     
     
     $output .= theme('uc_cart_block_summary', array('item_count' => $item_count, 'item_text' => $item_text, 'total' => $total, 'summary_links' => $summary_links));
-    $output .= '<a href="#" class="copy-button">Copy Cart To Clipboard</a>';
+    //$output .= '<a href="#" class="copy-button">Copy Cart To Clipboard</a>';
 
     //build hidden paragraph to copy to clipboard
     $paragraph = "";
