@@ -68,19 +68,10 @@
                 <tr valign="top">
                     <td>
 
-                        <?php if ($thank_you_message): ?>
-                            <p><b><?php print t('Thanks for your order, !order_first_name!', array('!order_first_name' => $order_first_name)); ?></b></p>
-
-                            <?php if (isset($order->data['new_user'])): ?>
-                                <p><b><?php print t('An account has been created for you with the following details:'); ?></b></p>
-                                <p><b><?php print t('Username:'); ?></b> <?php print $order_new_username; ?><br />
-                                    <b><?php print t('Password:'); ?></b> <?php print $order_new_password; ?></p>
-                            <?php endif; ?>
-
-                            <p><b><?php print t('Want to manage your order online?'); ?></b><br />
-                                <?php print t('If you need to check the status of your order, please visit our home page at !store_link and click on "My account" in the menu or login with the following link:', array('!store_link' => $store_link)); ?>
-                                <br /><br /><?php print $site_login_link; ?></p>
-                        <?php endif; ?>
+                        <p>Your order has been sent to System X</p>
+                        <p>Your order number is <?php print $order_link; ?></p>
+                        <p>You will receive an order confirmation shortly.</p>
+                        <p>Thank you for shopping at System X</p>
 
                         <table cellpadding="4" cellspacing="0" border="0" width="100%" style="font-family: verdana, arial, helvetica; font-size: small;">
                            
