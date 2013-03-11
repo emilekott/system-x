@@ -34,7 +34,7 @@ function uc_cart_default_rules_configuration() {
       'order:select' => 'order',
       'from' => uc_store_email_from(),
       'addresses' => uc_store_email(),
-      'subject' => t('New Order at [store:name]'),
+      'subject' => t('New Order: [order:order-id] at [store:name]'),
       'template' => 'admin',
       'view' => 'admin-mail',
     ));
